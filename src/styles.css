@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import"~bootstrap/dist/css/bootstrap.min.css";
+@import"~bootstrap/dist/css/bootstrap.css";
+@import "assets/css/style.css";
+@import "assets/css/hover-min.css";
+@import "assets/css/login.css";
+@import "assets/css/util.css";
+/* @import "D:\GP\bablo2\code\src\assets\fonts\googlefonts.css"; */
+@import "assets/vendor/animate/animate.css";
+@import "assets/vendor/animsition/css/animsition.min.css";
+@import "assets/vendor/animsition/css/animsition.css";
+@import "assets/vendor/aos/aos.css";
+@import "assets/vendor/css-hamburgers/hamburgers.css";
+@import "assets/vendor/css-hamburgers/hamburgers.min.css";
+@import "assets/vendor/daterangepicker/daterangepicker.css";
+@import "assets/vendor/icofont/icofont.min.css";
+@import "assets/vendor/line-awesome/css/line-awesome.css";
+@import "assets/vendor/line-awesome/css/line-awesome.min.css";
+@import "assets/vendor/owl.carousel/assets/owl.carousel.css";
+@import "assets/vendor/owl.carousel/assets/owl.carousel.min.css";
+@import "assets/vendor/owl.carousel/assets/owl.theme.default.css";
+@import "assets/vendor/owl.carousel/assets/owl.theme.default.min.css";
+@import "assets/vendor/owl.carousel/assets/owl.theme.green.css";
+@import "assets/vendor/owl.carousel/assets/owl.theme.green.min.css";
+@import "assets/vendor/select2/select2.css";
+@import "assets/vendor/select2/select2.min.css";
+/* @import "D:\GP\bablo2\code\src\assets\fonts\iconic\css\material-design-iconic-font.css"; */
+/* @import "D:\GP\bablo2\code\src\assets\fonts\iconic\css\material-design-iconic-font.min.css"; */
