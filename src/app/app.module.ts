@@ -45,6 +45,24 @@ import { AssignmentatComponent } from './Student/assignmentat/assignmentat.compo
 
 import { AttendanceSheetStudentComponent } from './Student/attendance-sheet-student/attendance-sheet-student.component';
 
+
+
+import { NavbarComponentt } from './Teacher/navbar/navbar.component';
+import { FooterComponentt } from './Teacher/footer/footer.component';
+import { HomeComponentt } from './Teacher/home/home.component';
+import { CoursesComponentt } from './Teacher/courses/courses.component';
+import { ProfileComponentt } from './Teacher/profile/profile.component';
+import { AttendanceComponentt } from './Teacher/attendance/attendance.component';
+import { NotificationsComponentt } from './Teacher/notifications/notifications.component';
+import { CoursesSingleComponentt } from './Teacher/courses-single/courses-single.component';
+import { CoursesInfoComponentt } from './Teacher/courses-info/courses-info.component';
+import { GradesComponentt } from './Teacher/grades/grades.component';
+import { AssignmentatComponentt } from './Teacher/assignmentat/assignmentat.component';
+
+import { AttendanceSheetStudentComponentt } from './Teacher/attendance-sheet-student/attendance-sheet-student.component';
+import { AddTaskComponent } from './Teacher/add-task/add-task.component';
+import { DeleteTaskComponent } from './Teacher/delete-task/delete-task.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -80,7 +98,6 @@ import { AttendanceSheetStudentComponent } from './Student/attendance-sheet-stud
 
 
 
-
     NavbarComponents,
     FooterComponents,
     HomeComponents,
@@ -93,8 +110,30 @@ import { AttendanceSheetStudentComponent } from './Student/attendance-sheet-stud
     GradesComponent,
     AssignmentatComponent,
     AttendanceSheetStudentComponent,
-    
 
+
+
+
+
+
+
+
+
+
+    NavbarComponentt,
+    FooterComponentt,
+    HomeComponentt,
+    CoursesComponentt,
+    ProfileComponentt,
+    AttendanceComponentt,
+    NotificationsComponentt,
+    CoursesSingleComponentt,
+    CoursesInfoComponentt,
+    GradesComponentt,
+    AssignmentatComponentt,
+    AttendanceSheetStudentComponentt,
+    AddTaskComponent,
+    DeleteTaskComponent,
   ],
   imports: [
     BrowserModule,
@@ -143,7 +182,7 @@ import { AttendanceSheetStudentComponent } from './Student/attendance-sheet-stud
       { path: 'user/profile', component: UserProfileComponent },
 
 
-// ------------------------------------------------Student-----------------------------
+      // ------------------------------------------------Student-----------------------------
 
       { path: 'student', component: HomeComponents },
       { path: 'student/courses', component: CoursesComponents },
@@ -155,6 +194,27 @@ import { AttendanceSheetStudentComponent } from './Student/attendance-sheet-stud
       { path: 'student/grades', component: GradesComponent },
       { path: 'student/assignmentat', component: AssignmentatComponent },
       { path: 'student/AttendanceSheetStudentComponent', component: AttendanceSheetStudentComponent },
+
+
+
+      // ------------------------------------------------Teacher-----------------------------
+
+      { path: 'teacher', component: HomeComponentt },
+      { path: 'teacher/courses', component: CoursesComponentt },
+      { path: 'teacher/profile', component: ProfileComponentt },
+      { path: 'teacher/attendance', component: AttendanceComponentt },
+      { path: 'teacher/notifications', component: NotificationsComponentt },
+      { path: 'teacher/courses-single', component: CoursesSingleComponentt },
+      { path: 'teacher/courses-info', component: CoursesInfoComponentt },
+      { path: 'teacher/grades', component: GradesComponentt },
+      { path: 'teacher/assignmentat', component: AssignmentatComponentt },
+      { path: 'teacher/AttendanceSheetStudentComponent', component: AttendanceSheetStudentComponentt },
+      
+      { path: 'teacher/course/add-task', component: AddTaskComponent },
+      { path: 'teacher/course/delete-task', component: DeleteTaskComponent },
+
+
+
 
     ])
   ],
