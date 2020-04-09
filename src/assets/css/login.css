@@ -1,26 +1,6 @@
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
-@font-face {
-    font-family: Poppins-Regular;
-    src: url('../fonts/poppins/Poppins-Regular.ttf');
-}
-
-@font-face {
-    font-family: Poppins-Medium;
-    src: url('../fonts/poppins/Poppins-Medium.ttf');
-}
-
-@font-face {
-    font-family: Poppins-Bold;
-    src: url('../fonts/poppins/Poppins-Bold.ttf');
-}
-
-@font-face {
-    font-family: Poppins-SemiBold;
-    src: url('../fonts/poppins/Poppins-SemiBold.ttf');
-}
-
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
@@ -34,14 +14,14 @@
 body,
 html {
     height: 100%;
-    font-family: Poppins-Regular, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 
 /*---------------------------------------------*/
 
 a {
-    font-family: Poppins-Regular;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
@@ -74,7 +54,7 @@ h6 {
 }
 
 p {
-    font-family: Poppins-Regular;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     line-height: 1.7;
     color: #666666;
@@ -196,7 +176,7 @@ iframe {
 [ Utility ]*/
 
 .txt1 {
-    font-family: Poppins-Regular;
+    font-family: "Poppins", sans-serif;
     font-size: 13px;
     color: #e5e5e5;
     line-height: 1.5;
@@ -278,7 +258,7 @@ iframe {
 }
 
 .login100-form-title {
-    font-family: Poppins-Medium;
+    font-family: "Poppins", sans-serif;
     font-size: 30px;
     color: #fff;
     line-height: 1.2;
@@ -299,7 +279,7 @@ iframe {
 }
 
 .input100 {
-    font-family: Poppins-Regular;
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     color: #fff;
     line-height: 1.2;
@@ -396,7 +376,7 @@ iframe {
 }
 
 .label-checkbox100 {
-    font-family: Poppins-Regular;
+    font-family: "Poppins", sans-serif;
     font-size: 13px;
     color: #fff;
     line-height: 1.2;
@@ -452,7 +432,7 @@ iframe {
 }
 
 .login100-form-btn {
-    font-family: Poppins-Medium;
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     color: #555555;
     line-height: 1.2;
@@ -540,7 +520,7 @@ iframe {
     transform: translateY(-50%);
     right: 0px;
     pointer-events: none;
-    font-family: Poppins-Regular;
+    font-family: "Poppins", sans-serif;
     color: #c80000;
     font-size: 13px;
     line-height: 1.4;
