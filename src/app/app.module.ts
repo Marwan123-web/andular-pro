@@ -27,6 +27,24 @@ import { UpdateUserComponent } from './Admin/update-user/update-user.component';
 import { DeleteCourseGradeComponent } from './Admin/delete-course-grade/delete-course-grade.component';
 import { UserProfileComponent } from './Admin/user-profile/user-profile.component';
 
+
+
+
+
+import { NavbarComponents } from './Student/navbar/navbar.component';
+import { FooterComponents } from './Student/footer/footer.component';
+import { HomeComponents } from './Student/home/home.component';
+import { CoursesComponents } from './Student/courses/courses.component';
+import { ProfileComponents } from './Student/profile/profile.component';
+import { AttendanceComponent } from './Student/attendance/attendance.component';
+import { NotificationsComponent } from './Student/notifications/notifications.component';
+import { CoursesSingleComponent } from './Student/courses-single/courses-single.component';
+import { CoursesInfoComponent } from './Student/courses-info/courses-info.component';
+import { GradesComponent } from './Student/grades/grades.component';
+import { AssignmentatComponent } from './Student/assignmentat/assignmentat.component';
+
+import { AttendanceSheetStudentComponent } from './Student/attendance-sheet-student/attendance-sheet-student.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +70,31 @@ import { UserProfileComponent } from './Admin/user-profile/user-profile.componen
     DeleteUserComponent,
     UpdateUserComponent,
     DeleteCourseGradeComponent,
-    UserProfileComponent
+    UserProfileComponent,
+
+
+
+
+
+
+
+
+
+
+    NavbarComponents,
+    FooterComponents,
+    HomeComponents,
+    CoursesComponents,
+    ProfileComponents,
+    AttendanceComponent,
+    NotificationsComponent,
+    CoursesSingleComponent,
+    CoursesInfoComponent,
+    GradesComponent,
+    AssignmentatComponent,
+    AttendanceSheetStudentComponent,
+    
+
   ],
   imports: [
     BrowserModule,
@@ -61,6 +103,7 @@ import { UserProfileComponent } from './Admin/user-profile/user-profile.componen
       { path: '', component: HomeComponent },
 
       { path: 'profile', component: ProfileComponent },
+
 
       { path: 'courses', component: CoursesComponent },
 
@@ -100,6 +143,18 @@ import { UserProfileComponent } from './Admin/user-profile/user-profile.componen
       { path: 'user/profile', component: UserProfileComponent },
 
 
+// ------------------------------------------------Student-----------------------------
+
+      { path: 'student', component: HomeComponents },
+      { path: 'student/courses', component: CoursesComponents },
+      { path: 'student/profile', component: ProfileComponents },
+      { path: 'student/attendance', component: AttendanceComponent },
+      { path: 'student/notifications', component: NotificationsComponent },
+      { path: 'student/courses-single', component: CoursesSingleComponent },
+      { path: 'student/courses-info', component: CoursesInfoComponent },
+      { path: 'student/grades', component: GradesComponent },
+      { path: 'student/assignmentat', component: AssignmentatComponent },
+      { path: 'student/AttendanceSheetStudentComponent', component: AttendanceSheetStudentComponent },
 
     ])
   ],
