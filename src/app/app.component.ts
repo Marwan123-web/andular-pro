@@ -9,8 +9,9 @@ export class AppComponent implements OnInit {
 
   constructor() { }
   title = 'Smart-Attendance';
-  ngOnInit(): void {
 
+
+  ngOnInit(): void {
     /*==================================================================
     [ Focus input ]*/
     $('.input100').each(function () {

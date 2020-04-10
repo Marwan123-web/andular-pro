@@ -39,18 +39,18 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="number" min="20201800" class="form-control" placeholder="ID *" value="">
+                                <input type="number" min="20201800" class="form-control" placeholder="ID *" #id value="">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name *" value="">
+                                <input type="text" class="form-control" placeholder="Name *" #name value="">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email *" value="">
+                                <input type="email" class="form-control" placeholder="Email *" #email value="">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Password *" value="">
+                                <input type="text" class="form-control" placeholder="Password *" #password value="">
                             </div>
                             <div class="form-group mb-2">
                                 <select class="form-control" id="role">
@@ -59,7 +59,7 @@
                                     <option>Admin</option>
                                 </select>
                             </div>
-                            <input type="submit" class="btn-addUser btnRegister" value="Add">
+                            <input type="submit" (click)="addUser(id,name,email,password)" class="btn-addUser btnRegister" value="Add">
                         </div>
                     </div>
                 </div>

@@ -28,32 +28,13 @@
                             <th scope="col ">Type</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody *ngFor='let user of usersdata'>
                         <tr>
-                            <th scope="row "><a routerLink="/user/profile">20171882</a></th>
-                            <td>Ahmed Hassan Ibrahim</td>
-                            <td>a7med7assan98@gmail.com</td>
-                            <td>student</td>
+                            <th scope="row "><a routerLink="/user/profile">{{user._id}}</a></th>
+                            <td>{{user.name}}</td>
+                            <td>{{user.email}}</td>
+                            <td>{{user.role}}</td>
                         </tr>
-                        <tr>
-                            <th scope="row "><a routerLink="/user/profile">20171882</a></th>
-                            <td>Ahmed Hassan Ibrahim</td>
-                            <td>a7med7assan98@gmail.com</td>
-                            <td>student</td>
-                        </tr>
-                        <tr>
-                            <th scope="row "><a routerLink="/user/profile">20171882</a></th>
-                            <td>Ahmed Hassan Ibrahim</td>
-                            <td>a7med7assan98@gmail.com</td>
-                            <td>student</td>
-                        </tr>
-                        <tr>
-                            <th scope="row "><a routerLink="/user/profile">20171882</a></th>
-                            <td>Ahmed Hassan Ibrahim</td>
-                            <td>a7med7assan98@gmail.com</td>
-                            <td>student</td>
-                        </tr>
-
                     </tbody>
                 </table>
 

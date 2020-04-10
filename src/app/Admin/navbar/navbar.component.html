@@ -22,13 +22,18 @@
                 <nav class="site-navigation position-relative text-right" role="navigation">
 
                     <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                        <li class="active"><a routerLink="/" class="nav-link">Home</a></li>
-                        <li><a routerLink="/courses" class="nav-link">Courses</a></li>
-                        <li><a routerLink="/users" class="nav-link">Users</a></li>
+                        <li><a routerLink="/" (click)="activebtn('home')" name='home' [class.active]='homebtn==true'
+                                class="nav-link">Home</a></li>
+                        <li><a routerLink="/courses" (click)="activebtn('course')" name='course'
+                                [class.active]='coursebtn==true' class="nav-link">Courses</a></li>
+                        <li><a routerLink="/users" (click)="activebtn('user')" name='user'
+                                [class.active]='userbtn==true' class="nav-link">Users</a></li>
                         <li class="has-children">
-                            <a routerLink="/profile" class="nav-link">Username</a>
+                            <a routerLink="/profile" class="nav-link" (click)="activebtn('profile')" name='profile'
+                                [class.active]='profilebtn==true'>Username</a>
                             <ul class="dropdown">
-                                <li><a routerLink="/profile" class="nav-link">Profile</a></li>
+                                <li><a routerLink="/profile" [class.active]='profilebtn==true'
+                                        class="nav-link">Profile</a></li>
                                 <li><a routerLink="/" class="nav-link">Logout</a></li>
                             </ul>
                         </li>
