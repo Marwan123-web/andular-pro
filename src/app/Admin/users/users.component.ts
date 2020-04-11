@@ -8,8 +8,7 @@ import { AdminservicesService } from 'src/app/services/adminservices.service';
 })
 export class UsersComponent implements OnInit {
   usersdata: any[];
-  role: string = 'student';
-  constructor(private adminservices: AdminservicesService) {}
+  constructor(private adminservices: AdminservicesService) { }
 
   ngOnInit(): void {
     this.adminservices.getUsers().subscribe(res => {

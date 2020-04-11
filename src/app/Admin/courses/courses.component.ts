@@ -13,7 +13,7 @@ export class CoursesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.adminservices.geCourses().subscribe(res => {
+    this.adminservices.getCourses().subscribe(res => {
       this.coursedata = res;
     }, err => {
       this.coursedata = err

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminservicesService } from 'src/app/services/adminservices.service';
 
 @Component({
   selector: 'app-delete-user',
@@ -6,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delete-user.component.scss']
 })
 export class DeleteUserComponent implements OnInit {
+  _id: any;
+  constructor(private adminservices: AdminservicesService) { }
 
-  constructor() { }
-
+  deleteUser(id: HTMLInputElement) {
+    this._id = id.value;
+    // this.adminservices.deleteUser(this._id).subscribe(res => {
+    //   console.log('Done');
+    // }, err => {
+    //   console.log('Fail');
+    // });
+    id.value = "";
+  }
   ngOnInit(): void {
   }
 

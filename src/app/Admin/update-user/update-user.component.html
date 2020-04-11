@@ -30,27 +30,29 @@
                     <div class="row addUser-form">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="number" min="20201800" class="form-control" placeholder="ID *" value="">
+                                <input type="number" min="20201800" class="form-control" placeholder="ID *" #id
+                                    value="">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name *" value="">
+                                <input type="text" class="form-control" placeholder="Name *" #name value="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email *" value="">
+                                <input type="email" class="form-control" placeholder="Email *" #email value="">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Password *" value="">
+                                <input type="text" class="form-control" placeholder="Password *" #password value="">
                             </div>
                             <div class="form-group mb-2">
-                                <select class="form-control" id="role">
-                                    <option>Student</option>
-                                    <option>Teacher</option>
-                                    <option>Admin</option>
+                                <select class="form-control" id="role" (change)="selectChangeHandler($event)">
+                                    <option value="student">Student</option>
+                                    <option value="teacher">Teacher</option>
+                                    <option value="admin">Admin</option>
                                 </select>
                             </div>
-                            <input type="submit" class="btn-addUser btnRegister" value="Update">
+                            <input type="submit" class="btn-addUser btnRegister"
+                                (click)="updateUser(id,name,email,password)" value="Update">
                         </div>
 
                     </div>

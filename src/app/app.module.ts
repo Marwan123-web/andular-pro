@@ -191,7 +191,7 @@ import { DeleteTaskComponent } from './Teacher/delete-task/delete-task.component
 
       { path: 'user/add-delete-course', component: AddUserCourseComponent },
 
-      { path: 'user/profile', component: UserProfileComponent },
+      { path: 'user/profile/:id', component: UserProfileComponent },
 
 
       // ------------------------------------------------Student-----------------------------

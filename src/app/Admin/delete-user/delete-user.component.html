@@ -28,9 +28,10 @@
                     <div class="row addUser-form">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="number" min="20201800" class="form-control" placeholder="ID *" value="">
+                                <input type="number" min="20201800" class="form-control" placeholder="ID *" #id
+                                    value="">
                             </div>
-                            <input type="submit" class="btn-addUser btnRegister" value="Delete"
+                            <input type="submit" class="btn-addUser btnRegister" value="Delete" (click)="deleteUser(id)"
                                 style="padding: 0!important;">
                         </div>
 

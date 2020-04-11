@@ -30,7 +30,7 @@
                     </thead>
                     <tbody *ngFor='let user of usersdata'>
                         <tr>
-                            <th scope="row "><a routerLink="/user/profile">{{user._id}}</a></th>
+                            <th scope="row "><a [routerLink]="['/user/profile', user._id]">{{user._id}}</a></th>
                             <td>{{user.name}}</td>
                             <td>{{user.email}}</td>
                             <td>{{user.role}}</td>
