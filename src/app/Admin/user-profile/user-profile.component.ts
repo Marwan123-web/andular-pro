@@ -11,7 +11,7 @@ export class UserProfileComponent implements OnInit {
   userdata: any;
   constructor(private adminservices: AdminservicesService, private _Activatedroute: ActivatedRoute,
     private _router: Router) { }
-  sub;
+  sub: any;
   ngOnInit(): void {
     this.sub = this._Activatedroute.paramMap.subscribe(params => {
       this._id = params.get('id');

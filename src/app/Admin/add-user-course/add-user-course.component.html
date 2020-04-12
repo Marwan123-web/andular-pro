@@ -28,12 +28,12 @@
                     <div class="row addUser-form">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Course Code *" value="">
+                                <input type="text" class="form-control" placeholder="Course Code *" #courseCode value="">
                             </div>
-                            <input type="submit" class="btn-addUser btnRegister" value="Add Course"
+                            <input type="submit" class="btn-addUser btnRegister" value="Add Course" (click)="addUserCourse(courseCode)"
                                 style="margin-top:15px!important; padding: 0!important;">
 
-                            <input type="submit" class="btn-addUser btnRegister" value="Delete Course"
+                            <input type="submit" class="btn-addUser btnRegister" value="Delete Course" (click)="deleteUserCourse(courseCode)"
                                 style="margin-top:15px!important;margin-right: 20px!important; padding: 0!important;">
                         </div>
 

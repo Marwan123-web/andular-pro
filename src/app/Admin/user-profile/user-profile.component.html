@@ -58,7 +58,8 @@
                 </div>
             </div>
             <button type="button" style="position: absolute; bottom: 15%; left: 65px"
-                class="attend-btn courseInfo-btn hvr-rectangle-in" routerLink='/user/courses' value="user-courses">Get
+                class="attend-btn courseInfo-btn hvr-rectangle-in" [routerLink]="['/user/courses',_id]"
+                value="user-courses">Get
                 User Courses</button>
         </div>
     </div>

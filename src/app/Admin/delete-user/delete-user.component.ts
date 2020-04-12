@@ -12,12 +12,13 @@ export class DeleteUserComponent implements OnInit {
 
   deleteUser(id: HTMLInputElement) {
     this._id = id.value;
-    // this.adminservices.deleteUser(this._id).subscribe(res => {
-    //   console.log('Done');
-    // }, err => {
-    //   console.log('Fail');
-    // });
-    id.value = "";
+    this.adminservices.deleteUser(this._id).subscribe(res => {
+      console.log('Done');
+      id.value = '';
+    }, err => {
+      console.log('Fail');
+    });
+
   }
   ngOnInit(): void {
   }

@@ -33,29 +33,23 @@
                             <th scope="col">Course 7</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody *ngIf="userdata">
                         <tr>
-                            <th scope="row"><a routerLink='/user/profile'>20171882</a></th>
+                            <th scope="row"><a [routerLink]="['/user/profile', userdata._id]">{{userdata._id}}</a></th>
+
                             <td>
-                                Ahmed Hassan Ibrahim
+                                {{userdata.name}}
                             </td>
-                            <td>IS</td>
-                            <td>CS</td>
-                            <td>IT</td>
-                            <td>SWE</td>
-                            <td>DB</td>
-                            <td>OS</td>
-                            <td></td>
+                            <td *ngFor='let course of userdata.courses'>{{course}}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <br>
             <br>
-            <button type="button" class="attend-btn courseInfo-btn hvr-rectangle-in"
-                routerLink='/user/add-delete-course' value="students-sheet">Add/Delete User Course
+            <button *ngIf="userdata" type="button" class="attend-btn courseInfo-btn hvr-rectangle-in"
+                [routerLink]="['/user/add-delete-course',userdata._id]" value="students-sheet ">Add/Delete User Course
             </button>
-
 
         </div>user/update-user
     </div>

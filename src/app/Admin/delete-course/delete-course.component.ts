@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminservicesService } from 'src/app/services/adminservices.service';
 
 @Component({
   selector: 'app-delete-course',
@@ -6,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delete-course.component.scss']
 })
 export class DeleteCourseComponent implements OnInit {
+  courseCode: any;
+  constructor(private adminservices: AdminservicesService) { }
 
-  constructor() { }
-
+  deleteCourse(courseCode: HTMLInputElement) {
+    this.courseCode = courseCode.value;
+    this.adminservices.deleteCourse(this.courseCode).subscribe(res => {
+      console.log('Done');
+      courseCode.value = '';
+    }, err => {
+      console.log('Fail');
+    });
+  }
   ngOnInit(): void {
   }
 

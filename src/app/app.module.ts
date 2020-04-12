@@ -181,7 +181,7 @@ import { DeleteTaskComponent } from './Teacher/delete-task/delete-task.component
 
       { path: 'users', component: UsersComponent },
 
-      { path: 'user/courses', component: UserCoursesComponent },
+      { path: 'user/courses/:id', component: UserCoursesComponent },
 
       { path: 'user/add-user', component: AddUserComponent },
 
@@ -189,7 +189,7 @@ import { DeleteTaskComponent } from './Teacher/delete-task/delete-task.component
 
       { path: 'user/delete-user', component: DeleteUserComponent },
 
-      { path: 'user/add-delete-course', component: AddUserCourseComponent },
+      { path: 'user/add-delete-course/:id', component: AddUserCourseComponent },
 
       { path: 'user/profile/:id', component: UserProfileComponent },
 
@@ -221,7 +221,7 @@ import { DeleteTaskComponent } from './Teacher/delete-task/delete-task.component
       { path: 'teacher/grades', component: GradesComponentt },
       { path: 'teacher/assignmentat', component: AssignmentatComponentt },
       { path: 'teacher/AttendanceSheetStudentComponent', component: AttendanceSheetStudentComponentt },
-      
+
       { path: 'teacher/course/add-task', component: AddTaskComponent },
       { path: 'teacher/course/delete-task', component: DeleteTaskComponent },
 

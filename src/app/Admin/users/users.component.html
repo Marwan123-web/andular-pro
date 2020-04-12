@@ -19,6 +19,14 @@
     <div class="container">
         <div class="row row3 align-items-center justify-content-center">
             <div class="table-wrapper">
+                <div class="form-group mb-2">
+                    <select class="form-control" id="role" (change)="selectChangeHandler($event)">
+                        <option value="">All Users</option>
+                        <option value="student">Students</option>
+                        <option value="teacher">Teachers</option>
+                        <option value="admin">Admins</option>
+                    </select>
+                </div>
                 <table class="table grades-table" style="color: white; width: 1100px;">
                     <thead>
                         <tr>

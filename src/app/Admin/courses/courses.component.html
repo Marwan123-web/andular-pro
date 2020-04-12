@@ -19,6 +19,16 @@
     <div class="container">
         <div class="row row3 align-items-center justify-content-center">
             <div class="table-wrapper">
+                <div class="form-group mb-2">
+                    <select class="form-control" id="department" (change)="selectChangeHandler($event)">
+                        <option value="">All Courses</option>
+                        <option value="Information Systems">Information Systems Department</option>
+                        <option value="Computer Science">Computer Science Department</option>
+                        <option value="Internet Technology">Internet Technology Department</option>
+                        <option value="BIO">BIO Department</option>
+
+                    </select>
+                </div>
                 <table class="table courses-table" style="color: white;">
                     <thead>
                         <tr>
