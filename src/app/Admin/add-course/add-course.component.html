@@ -39,6 +39,7 @@
                                 <!-- <input type="text" class="form-control" placeholder="Department *" #courseDepartment
                                     value=""> -->
                                 <select class="form-control" id='department' (change)="selectChangeHandler($event)">
+                                    <option value="">*Select Course Department</option>
                                     <option data-id="IS" value="Information Systems">Information Systems</option>
                                     <option data-id="CS" value="Computer Science">Computer Science</option>
                                     <option data-id="IT" value="Internet Technology">Internet Technology</option>
@@ -46,7 +47,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Hourse *" #creaditHours value="">
+                                <input type="number" class="form-control" placeholder="Hourse *" #creaditHours value="">
                             </div>
                             <input type="submit" class="btn-addUser btnRegister"
                                 (click)="addCourse(courseCode,courseName,creaditHours)" style="margin-top:15px!"
