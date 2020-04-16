@@ -17,8 +17,21 @@ export class AdminservicesService {
   userCoursesBody: any;
   addUserCourseBody: any;
   addUserCourseId: any;
-  deleteUserCourseBody: { courseCode: any; };
+  deleteUserCourseBody: any;
   deleteUserCourseId: any;
+  getCourseDataBody: any;
+  addCourseGradeBody: any;
+  addCourseGradeId: any;
+  deleteCourseGradebody: any;
+  deleteCourseGradetypebody: any;
+  courseStudentsSheetBody: any;
+  courseStudentsGradesBody: any;
+  addStudentGradeBody: any;
+  addStudentGradeId: any;
+  courseGradeType: any;
+  getStudentGradeCourseCode: any;
+  getStudentGradeGradeType: any;
+  getCourseGradeType: any;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -76,6 +89,12 @@ export class AdminservicesService {
     return this.httpClient.get('http://localhost:3000/courses');
   }
 
+  public getCourseData(courseCode): Observable<any> {
+    this.getCourseDataBody = courseCode
+    return this.httpClient.get(`http://localhost:3000/course/${this.getCourseDataBody}`);
+  }
+
+
   public getDepartmentCourses(courseDepartment): Observable<any> {
     this.coursesDepartmentbody = courseDepartment;
     return this.httpClient.get(`http://localhost:3000/courses/${this.coursesDepartmentbody}`);
@@ -100,4 +119,49 @@ export class AdminservicesService {
   }
 
 
+
+  public addCourseGrade(courseCode, type, grade): Observable<any> {
+    this.addCourseGradeBody = { type, grade };
+    this.addCourseGradeId = courseCode;
+    console.log(this.addCourseGradeId);
+    let headers = new HttpHeaders({ 'Content-Type': 'application/JSON' });
+    return this.httpClient.post(`http://localhost:3000/add/course/grade/${this.addCourseGradeId}`, this.addCourseGradeBody, { headers: headers });
+  }
+  public deleteCourseGrade(courseCode, type): Observable<any> {
+    this.deleteCourseGradebody = courseCode;
+    this.deleteCourseGradetypebody = type;
+    return this.httpClient.delete(`http://localhost:3000/delete/course/grade/${this.deleteCourseGradebody}/${this.deleteCourseGradetypebody}`);
+  }
+
+  public getCourseStudentsSheet(courseCode): Observable<any> {
+    this.courseStudentsSheetBody = courseCode;
+    return this.httpClient.get(`http://localhost:3000/course/students/${this.courseStudentsSheetBody}`);
+  }
+  public getCourseStudentsGrades(courseCode, gradeType): Observable<any> {
+    this.courseStudentsGradesBody = courseCode;
+    this.courseGradeType = gradeType;
+    return this.httpClient.get(`http://localhost:3000/course/students/grades/${this.courseStudentsGradesBody}/${this.courseGradeType}`);
+  }
+
+
+
+
+  public addStudentGrade(courseCode, studentId, gradeType, score): Observable<any> {
+    this.addStudentGradeBody = { studentId, gradeType, score };
+    this.addStudentGradeId = courseCode;
+    let headers = new HttpHeaders({ 'Content-Type': 'application/JSON' });
+    return this.httpClient.post(`http://localhost:3000/add/student/grade/${this.addStudentGradeId}`, this.addStudentGradeBody, { headers: headers });
+  }
+
+  public getCourseGrades(courseCode, gradeType): Observable<any> {
+    this.getCourseDataBody = courseCode;
+    this.getCourseGradeType=gradeType;
+    return this.httpClient.get(`http://localhost:3000/course/grades/${this.getCourseDataBody}/${this.getCourseGradeType}`);
+  }
+
+  // public getCourseGrades(courseCode, gradeType): Observable<any> {
+  //   this.getStudentGradeCourseCode = courseCode;
+  //   this.getStudentGradeGradeType = gradeType;
+  //   return this.httpClient.get(`http://localhost:3000/course/students/grades/${this.getStudentGradeCourseCode}/${this.getStudentGradeGradeType}`)
+  // }
 }
